@@ -25,7 +25,7 @@ const database = new Database(config.db);
         channels.set(row.id, JSON.parse(row.config));
     }
 
-    await bot.login(config.auth_token);
+    await bot.login(process.env.TOKEN);
 
     // load commands
     const commands = [];
